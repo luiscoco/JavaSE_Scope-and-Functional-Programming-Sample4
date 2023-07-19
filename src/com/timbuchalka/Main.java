@@ -39,8 +39,8 @@ public class Main {
 //        }
 
         AnotherClass anotherClass = new AnotherClass();
-        anotherClass.doSomething();
-        anotherClass.printValue();
+        String s = anotherClass.doSomething();
+        System.out.println(s);
     }
 
     public static String doStringStuff(UpperConcat uc, String s1, String s2) {
@@ -86,7 +86,6 @@ class AnotherClass {
         UpperConcat uc = (s1, s2) -> {
             System.out.println("The lambda expression's class is " + getClass().getSimpleName());
             System.out.println("i in the lambda expression = " + i);
-            System.out.println(s1.toUpperCase() + s2.toUpperCase());
             return s1.toUpperCase() + s2.toUpperCase();
         };
 
